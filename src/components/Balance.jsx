@@ -1,5 +1,3 @@
-import {store} from "../configureStore/store.js";
-import {useSyncExternalStore} from "react";
 import {useSelector} from "react-redux";
 
 const Balance = () => {
