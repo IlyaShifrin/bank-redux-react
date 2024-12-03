@@ -1,6 +1,5 @@
 import {useState} from "react";
 import {deposit, withDraw} from "../actions/accountActions.js";
-import {store} from "../configureStore/store.js";
 import {useDispatch} from "react-redux";
 
 const Operation = () => {
