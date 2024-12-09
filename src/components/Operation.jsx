@@ -1,7 +1,7 @@
 import {useState} from "react";
-import {deposit, withDraw} from "../actions/accountActions.js";
 import {useDispatch} from "react-redux";
-import {fetchQuote} from "../actions/quoteAction.js";
+import {deposit, withdraw} from "../features/account/balanceSlice.js";
+import {fetchQuote} from "../features/api/quoteAction.js";
 
 const Operation = () => {
     const [sum, setSum] = useState(1);
@@ -12,7 +12,7 @@ const Operation = () => {
             <div className={'flex justify-center'}>
                 <button
                     className={'bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg text-lg'}
-                    onClick={() => dispatch(withDraw(sum))}>Withdraw
+                    onClick={() => dispatch(withdraw(sum))}>Withdraw
                 </button>
                 <input
                     className={'text-center border rounded-lg'}
