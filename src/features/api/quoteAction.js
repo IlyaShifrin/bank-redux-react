@@ -6,7 +6,7 @@ export const fetchQuote = () => {
         fetch('https://api.gameofthronesquotes.xyz/v1/random ')
             .then(res => res.json())
             .then(data => dispatch(putQuote(data.sentence)))
-            .catch(() => putQuote('Failed to fetch quote data'));
+            .catch(() => dispatch(putQuote('Failed to fetch quote data')));
 
     }
 }
